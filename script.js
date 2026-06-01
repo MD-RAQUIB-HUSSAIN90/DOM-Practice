@@ -128,8 +128,7 @@
     
 // })
 
-// Event bubbling
-
+// Event bubbling..................
 
 // let nav=document.querySelector("#nav");
 
@@ -138,8 +137,32 @@
 // })
 
 
-let ul=document.querySelector("ul");
-console.log(ul);
-ul.addEventListener("click",function(li){
-li.target.style.textDecoration="underline"
-})
+// let ul=document.querySelector("ul");
+// console.log(ul);
+
+// ul.addEventListener("click",function(li){
+// li.target.classList.toggle("lt")
+// }) 
+
+
+// Event capturing...............
+
+let a=document.querySelector(".a");
+let b=document.querySelector(".b");
+let c=document.querySelector(".c");
+let btn=document.querySelector("button");
+
+
+ btn.addEventListener("click",function(){
+console.log("you clicked on button");
+    })
+    
+    c.addEventListener("click",function(){
+        console.log("you clicked on c");
+    })
+    b.addEventListener("click",function(){
+        console.log("you clicked on b");
+    })
+    a.addEventListener("click",function(){
+        console.log("you clicked on a");
+    })
