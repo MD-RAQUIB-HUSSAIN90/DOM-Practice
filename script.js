@@ -69,9 +69,6 @@
 
 // form handling
 
-
-
-
 // function red(){
 //     return function dbl(){h1.style.color="red"
 // }
@@ -80,14 +77,10 @@
 // let double=red();
 // double();
 
-
-
-
 // let h1=document.createElement("h1");
 // let btn=document.createElement("button")
 // btn.textContent="clik here"
 // document.body.append(btn)
-
 
 // btn.addEventListener("click",function(){
 // h1.textContent="hello everyone how are you??"
@@ -105,14 +98,11 @@
 // div.style.position="absolute";
 // div.classList.add("move");
 
-
 // window.addEventListener("mousemove", function (events){
-    
+
 //     div.style.top=events.clientY+"px";
 //     div.style.left=events.clientX+"px";
 // });
-
-
 
 // let abcd=document.createElement("div");
 // abcd.classList.add("abcd");
@@ -125,7 +115,7 @@
 // let form=document.querySelector("form");
 // form.addEventListener("submit",function(e){
 //     e.preventDefault();
-    
+
 // })
 
 // Event bubbling..................
@@ -136,33 +126,56 @@
 //     alert("you clicked on nav")
 // })
 
-
 // let ul=document.querySelector("ul");
 // console.log(ul);
 
 // ul.addEventListener("click",function(li){
 // li.target.classList.toggle("lt")
-// }) 
+// })
 
+// Event Bubbling...............
 
-// Event capturing...............
+// let a=document.querySelector(".a");
+// let b=document.querySelector(".b");
+// let c=document.querySelector(".c");
+// let btn=document.querySelector("button");
 
-let a=document.querySelector(".a");
-let b=document.querySelector(".b");
-let c=document.querySelector(".c");
-let btn=document.querySelector("button");
+//  btn.addEventListener("click",function(){
+// console.log("you clicked on button");
+//     })
 
+//
 
- btn.addEventListener("click",function(){
-console.log("you clicked on button");
-    })
-    
-    c.addEventListener("click",function(){
-        console.log("you clicked on c");
-    })
-    b.addEventListener("click",function(){
-        console.log("you clicked on b");
-    })
-    a.addEventListener("click",function(){
-        console.log("you clicked on a");
-    })
+// Event Capturing..................
+// let a=document.querySelector(".a");
+// let b=document.querySelector(".b");
+// let c=document.querySelector(".c");
+// let btn=document.querySelector("button");
+
+//  btn.addEventListener("click",function(){
+// console.log("you clicked on button");})
+
+//   c.addEventListener("click",function(){
+//         console.log("you clicked on c");
+//     },true)
+//     b.addEventListener("click",function(){
+//         console.log("you clicked on b");
+//     })
+//     a.addEventListener("click",function(){
+//         console.log("you clicked on a");
+//     },true)
+
+// Live character counter.....................
+
+// let inp = document.querySelector("input");
+
+// inp.addEventListener("input", () => {
+//   let lft = 20 - inp.value.length;
+//   if (lft >= 0) {
+//     document.querySelector("h1 span").textContent = lft;
+//     document.querySelector("h1 span").style.color = "black";
+//   } else {
+//     document.querySelector("h1 span").textContent = lft;
+//     document.querySelector("h1 span").style.color = "red";
+//   }
+// });
