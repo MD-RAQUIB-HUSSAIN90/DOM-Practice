@@ -179,3 +179,120 @@
 //     document.querySelector("h1 span").style.color = "red";
 //   }
 // });
+
+
+// Qs1 Ek button banao. Click karne par console me "Button Clicked" print karo.
+
+// Ans
+// let btn = document.createElement("button");
+// btn.textContent = "Click";
+// document.querySelector("body").append(btn);
+// let btn = document.querySelector("button");
+// let h1 = document.querySelector("h1");
+// function pritnBtn() {
+//   h1.textContent = "Danish padhne me bhut acha larka hai aur Aaliya bhi hai";
+// }
+
+// btn.addEventListener("click", pritnBtn);
+
+// Q2 Ek button par click karne par background color red kar do.
+
+// Ans
+
+// function changeBgrdcl() {
+//   document.body.style.background = "black";
+// }
+// btn.addEventListener("click", changeBgrdcl);
+
+// Qs3 Ek button par mouseover listener lagao aur text change karo.
+// let h1 = document.querySelector("h1");
+// h1.addEventListener("mouseover", () => {
+//   h1.textContent = "hello everyone";
+// });
+
+// Qs4 Ek button par click event add karo aur dusre button se us event ko remove karo.
+// let add_Event = document.getElementById("start");
+// let check_result = document.getElementById("result");
+// let Remove = document.getElementById("remove");
+
+// function showMassege() {
+//   alert("this is a alert");
+// }
+
+// add_Event.addEventListener("click", () => {
+//   check_result.addEventListener("click", showMassege);
+// });
+
+// Remove.addEventListener("click", () => {
+//   check_result.removeEventListener("click", showMassege);
+// });
+
+// Q5
+// Ek hi button par click aur mouseover dono listeners lagao.
+
+// Ans
+// let btn=document.querySelector("#start");
+
+// btn.addEventListener("click",()=>{
+//     alert("hey")
+// })
+// btn.addEventListener("mouseover",()=>{
+//     alert("hover")
+// })
+
+// Q6
+// Button click hone par count increase karo.
+// let btn = document.querySelector("#start");
+// let count = 0;
+// let div = document.createElement("div");
+// let body = document.querySelector("body");
+// body.append(div);
+// btn.addEventListener("click", () => {
+//   count++;
+//  div.innerHTML = `<h1>${count}</h1>`;
+// });
+
+// Q7
+// Ek function banao aur use event listener me pass karo.
+// function pass(){
+//     alert("pass ho gaya");
+// }
+// let btn=document.querySelector("button");
+// btn.addEventListener("click",pass)
+
+// Q8
+// Button ko double click karne par alert dikhao.
+// let btn=document.querySelector("button");
+// btn.addEventListener("dblclick",()=>{
+//     alert("pass ho gaya");
+// })
+
+// Q9
+// Button click hone par image hide karo.
+
+// let btn=document.querySelector("button");
+// let img=document.querySelector("img");
+// btn.addEventListener("click",()=>{
+//     img.src="hidden"
+// })
+
+// Q10
+// Ek toggle button banao jo event listener add/remove kare.
+
+// let toggleBtn = document.getElementById("toggle");
+// let target = document.getElementById("target");
+// let isActive = false;
+// function showMessage() {
+//   alert("Event Active Hai!");
+// }
+// toggleBtn.addEventListener("click", () => {
+//   if (!isActive) {
+//     target.addEventListener("click", showMessage);
+//     toggleBtn.textContent = "Disable event";
+//     isActive = true;
+//   } else {
+//     target.removeEventListener("click", showMessage);
+//     toggleBtn.textContent = "Enable event";
+//     isActive = false;
+//   }
+// });
