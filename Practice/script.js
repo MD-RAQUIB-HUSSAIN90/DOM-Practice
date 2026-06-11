@@ -180,7 +180,6 @@
 //   }
 // });
 
-
 // Qs1 Ek button banao. Click karne par console me "Button Clicked" print karo.
 
 // Ans
@@ -296,3 +295,110 @@
 //     isActive = false;
 //   }
 // });
+
+// 2 Common Events Practice(10)
+// Q1 Input field me jo type ho raha hai use live <p> me show karo.
+
+// let input=document.querySelector("input");
+// let p=document.querySelector("p")
+// input.addEventListener("input",(e)=>{
+//   p.textContent=  e.target.value;
+// })
+
+// Q2
+// Input me Enter press karne par alert dikhao.
+
+// let input=document.querySelector("input");
+
+// input.addEventListener("keydown",(e)=>{
+//     if(e.key==="Enter"){
+//         alert("sale Enter mat daba khali dibbe me")
+//         return
+//     }
+//     console.log(e);
+// })
+
+// Q3
+// Form submit hone par console me "Submitted" print karo.
+
+// Ans
+// let form = document.querySelector("form");
+// form.addEventListener("submit", (e) => {
+// e.preventDefault();
+//   console.log("Submitted");
+// });
+
+// Q4
+// Mouse element ke upar jaye to color green ho jaye.
+
+// Ans
+// let h2=document.querySelector("h2");
+// h2.addEventListener("mouseover",()=>{
+//     h2.style.color="green"
+// })
+
+// Q5
+// Mouse bahar nikle to color white ho jaye./ let h2=document.querySelector("h2");
+
+// Ans
+// let h2=document.querySelector("h2");
+// h2.addEventListener("mouseout",()=>{
+//     h2.style.color="white"
+// })
+
+// Q6
+// Checkbox tick hote hi message show karo.
+
+// Ans
+// let input=document.querySelector("input");
+// input.addEventListener('change',(e)=>{
+//     if(input.checked){
+//         console.log("hii");
+//     }
+// })
+
+// Q7
+// Dropdown change hone par selected value print karo.
+
+// Ans
+
+// let select = document.querySelector("select");
+// let p= document.querySelector("p");
+// select.addEventListener("change",()=>{
+//     p.textContent=select.value
+//     console.log(select.value);
+
+//   })
+
+// Q9
+// Input empty ho to warning dikhao.
+
+// Ans
+// let input=document.querySelector("input");
+// input.addEventListener("click",()=>{
+// if(input.value===""){
+//     console.warn("input val empty")
+// }
+// else{
+//     alert('fill input');
+// }
+// })
+
+// Q10
+// Textarea me character count show karo.
+
+// let textArea = document.querySelector("#text");
+// let count = 1;
+// let span=document.querySelector("span")
+
+// textArea.addEventListener("keydown", () => {
+//   span.textContent =count++;
+
+// });
+
+
+
+let input=document.querySelector("input");
+input.addEventListener("focus", () => {
+  console.log("Focus hat gaya");
+});
