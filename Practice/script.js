@@ -396,9 +396,321 @@
 
 // });
 
+// let input=document.querySelector("input");
+// input.addEventListener("focus", () => {
+//   console.log("Focus hat gaya");
+// });
+
+// 3. Event Object Practice (10)
+// Q1
+// Clicked button ka text console me print karo.
+
+// Ans
+// let btn=document.querySelector("button")
+// btn.addEventListener("click",()=>{
+//   console.log(btn.textContent);
+// })
+
+// Q2
+// Clicked element ka tag name print karo.
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", () => {
+//   console.log(btn.tagName);
+// });
+
+// Q3
+
+// Event type print karo.
+
+// let btn=document.querySelector("button")
+// btn.addEventListener("click",(e)=>{
+//   console.log(e.type);//click
+// })
+
+// Q4
+// Input ki value event.target.value se print karo.
+// let input = document.querySelector("input");
+// input.addEventListener("input", (e) => {
+//   console.log(e.target.value);
+// });
+
+// Q5
+// Form submit hone se roko.
+// event.preventDefault();//isse form submit se ruke ga
+
+// Q6
+// Clicked element ka id print karo.
+
+// let btn=document.querySelector("button");
+// btn.addEventListener("click",()=>{
+// console.log(btn.getAttribute("id"));
+// })
+
+// Q7
+// Clicked element ka className print karo.
+
+// let btn=document.querySelector("button");
+// btn.addEventListener("click",()=>{
+// console.log(btn.className);
+// })
+
+// Q8
+// Image par click karne par image source print karo.
+
+// let img = document.querySelector("img");
+// img.addEventListener("click", () => {
+//   console.log(img.getAttribute("src"));
+// });
+
+// Q9
+// Mouse coordinates print karo.
+
+// window.addEventListener("mousemove",(e)=>{
+//   console.log(e.clientX, e.clientY);
+// })
+
+// Q10
+// Keyboard se press hui key print karo.
+
+// let p=document.querySelector('p');
+// window.addEventListener("keypress",(e)=>{
+// console.log(e.key);
+// })
+
+// 5. Event Delegation Practice (10)
+// Q1
+// ul ke andar 5 li banao. Kisi bhi li par click karo aur uska text print karo.
+
+// let ul = document.querySelector("ul");
+// let li = document.querySelectorAll("li");
+
+// ul.addEventListener("click", () => {
+
+// });
+
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
+
+// parent.addEventListener("click",() => {
+//     console.log("Parent Clicked");
+//   },
+
+// );
+
+// child.addEventListener(
+//   "click",
+//   (e) => {
+//     e.stopPropagation();
+//     console.log("button clicked");
+//   },
+
+// );
+
+// 4. Event Bubbling & Capturing Practice (10)
+// Q1
+// Parent aur child div banao. Dono par click listener lagao.
+
+// let parent=document.querySelector("#parent");
+// let child=document.querySelector("#child");
+
+// parent.addEventListener("click",()=>{
+//   console.log("parent button clicked");
+// })
+// child.addEventListener("click",()=>{
+//   console.log("child button clicked");
+// })
+
+// Q2
+// Child click karne par bubbling observe karo.
+//  observe karne par dikha ki parent par jab click kiya to parent wala hi srf chala or jab child par click kiya to child pehle uske baad parent bhi chala dono chala
+//
+
+// Q3
+// stopPropagation() use karke bubbling roko.
+
+// let parent=document.querySelector("#parent");
+// let child=document.querySelector("#child");
+
+// parent.addEventListener("click",()=>{
+//   console.log("parent button clicked");
+// })
+// child.addEventListener("click",(e)=>{
+//   e.stopPropagation();
+//   console.log("child button clicked");
+// })
+
+// Q4
+// Parent → Child → Button structure banao aur event order dekho.
+
+// let parent=document.querySelector("#parent");
+// let child=document.querySelector("#child");
+// let btn=document.querySelector("button");
+
+// parent.addEventListener("click",()=>{
+//   console.log("parent button clicked");
+// })
+// child.addEventListener("click",(e)=>{
+//
+//   console.log("child button clicked");
+// })
+// btn.addEventListener("click",(e)=>{
+//    
+//   console.log("button clicked ");
+
+// })
+
+//  <div id="parent">parents
+//       <div id="child">child
+//            <button>click</button>
+//       </div>
+//   </div>
+
+// Q5
+// Capturing mode enable karo.
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
+
+// parent.addEventListener(
+//   "click",
+//   () => {
+//     console.log("parent button clicked");
+//   },true
+
+// );
+// child.addEventListener("click", () => {
+//   console.log("child button clicked");
+// } ,true);
+
+// Q6
+// Bubbling aur capturing ke output compare karo.
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
+
+// parent.addEventListener(
+//   "click",
+//   () => {
+//     console.log("parent button clicked to capturing");
+//   },
+//   true,
+// );
+// child.addEventListener(
+//   "click",
+//   () => {
+//     console.log("child button clicked to capturing");
+//   },
+//   true,
+// );
+// parent.addEventListener("click", () => {
+//   console.log("parent button clicked to bubbling");
+// });
+// child.addEventListener("click", () => {
+//   console.log("child button clicked to bubbling");
+// });
+
+// parent button clicked to capturing
+// parent button clicked to bubbling
+//  parent button clicked to capturing
+//  child button clicked to capturing
+//  child button clicked to bubbling
+//  parent button clicked to bubbling
+
+// Q7
+// Nested 3 div banao aur click order note karo.
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
+// let baby = document.querySelector("#baby");
+
+// parent.addEventListener("click", () => {
+//   console.log("parent clicked");
+// });
+
+// child.addEventListener("click", () => {
+//   console.log("child clicked");
+// });
+
+// baby.addEventListener("click", () => {
+//   console.log("baby click");
+// });
+
+// baby par click krne se ye aya
+// {
+// baby click
+// child clicked
+// parent clicked
+// }
+
+// Q8
+//Parent listener ko capture mode me lagao
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
+
+// parent.addEventListener(
+//   "click",
+//   () => {
+//     console.log("parent clicked");
+//   },
+//   true,
+// );
+
+// child.addEventListener("click", () => {
+//   console.log("child clicked");
+// });
+
+// Q9
+
+// Child click par parent event rok do.
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
+
+// parent.addEventListener(
+//   "click",
+//   (e) => {
+//   
+//     console.log("parent clicked");
+//   },
+//   true,
+// );
+
+// child.addEventListener("click", (e) => {
+    // e.stopPropagation();
+//   console.log("child clicked");
+// });
 
 
-let input=document.querySelector("input");
-input.addEventListener("focus", () => {
-  console.log("Focus hat gaya");
-});
+// Q10
+// Console me har event ka target print karo.
+
+
+// let parent = document.querySelector("#parent");
+// let child = document.querySelector("#child");
+// let baby = document.querySelector("#baby");
+
+// parent.addEventListener("click", (c) => {
+//   console.log(c.target);
+// });
+
+// child.addEventListener("click", (d) => {
+//   console.log(d.target);
+// });
+
+// baby.addEventListener("click", (e) => {
+//   console.log(e.target);
+// });
+
+// parent par click
+// {<div id="parent">…</div>}
+// //child par click
+// {<div id="child">…</div>
+// <div id="child">…</div>}
+
+
+// baby par click
+{/* <div id="baby">baby</div>
+<div id="baby">baby</div>
+<div id="baby">baby</div> */}
+
+
+// let list = document.getElementById("list");
+// list.addEventListener("click", (e) => {
+//   console.log(e.target.textContent);
+// });
