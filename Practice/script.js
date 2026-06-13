@@ -754,3 +754,55 @@
 //   }
 // }
 // btn.addEventListener("click", add);
+
+// Q4
+// Parent div par listener lagao aur child button identify karo.
+
+// let parent=document.querySelector("#parent");
+// let child=document.querySelector("#child");
+
+// parent.addEventListener("click",()=>{
+//   console.log(child.textContent);
+
+// })
+
+// Q5
+// 100 buttons create karo, sirf parent par listener lagao.
+
+// let allBtn = document.querySelector("#allBtn");
+// let count = 0;
+// allBtn.addEventListener("click", (e) => {
+//   if (e.target.getAttribute("class")) console.log(count++);
+// });
+
+// Q6
+// Clicked button ka text print karo.
+// let allBtn = document.querySelector("#allBtn");
+// let count = 0;
+// allBtn.addEventListener("click", (e) => {
+//   console.log(e.target.textContent);
+// });
+
+// let input = document.querySelector("input");
+// let ul = document.querySelector("ul");
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", () => {
+//   let li = document.createElement("li");
+//   li.innerHTML = `${input.value} <button class="delete">Delete</button>`;
+
+//   ul.append(li);
+// });
+
+// ul.addEventListener("click", (e) => {
+//   if (e.target.className === "delete") {
+//     console.log(e.target);
+//   }
+// });
+
+// let ul = document.querySelector("ul");
+// ul.addEventListener("click", (e) => {
+//   if ((e.target.tagName =="LI")) {
+//     e.target.remove();
+//   }
+// });
