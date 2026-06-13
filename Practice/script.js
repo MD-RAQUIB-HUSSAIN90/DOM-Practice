@@ -554,7 +554,7 @@
 //   console.log("child button clicked");
 // })
 // btn.addEventListener("click",(e)=>{
-//    
+//
 //   console.log("button clicked ");
 
 // })
@@ -665,21 +665,19 @@
 // parent.addEventListener(
 //   "click",
 //   (e) => {
-//   
+//
 //     console.log("parent clicked");
 //   },
 //   true,
 // );
 
 // child.addEventListener("click", (e) => {
-    // e.stopPropagation();
+// e.stopPropagation();
 //   console.log("child clicked");
 // });
 
-
 // Q10
 // Console me har event ka target print karo.
-
 
 // let parent = document.querySelector("#parent");
 // let child = document.querySelector("#child");
@@ -703,14 +701,56 @@
 // {<div id="child">…</div>
 // <div id="child">…</div>}
 
-
 // baby par click
-{/* <div id="baby">baby</div>
+{
+  /* <div id="baby">baby</div>
 <div id="baby">baby</div>
-<div id="baby">baby</div> */}
-
+<div id="baby">baby</div> */
+}
 
 // let list = document.getElementById("list");
 // list.addEventListener("click", (e) => {
 //   console.log(e.target.textContent);
 // });
+
+// 5. Event Delegation Practice (10)
+// Q1
+// ul ke andar 5 li banao. Kisi bhi li par click karo aur uska text print karo.
+
+// Ans
+// let list = document.querySelector("ul");
+// list.addEventListener("click", (e) => {
+//   console.log(e.target.textContent);
+// });
+
+// Q2
+// Dynamic li add karo aur click event kaam karna chahiye.
+// let list = document.querySelector("ul");
+// let li = document.createElement("li");
+// li.textContent = "React.js";
+// list.append(li);
+// list.addEventListener("click", (e) => {
+//   console.log(e.target.textContent);
+// });
+
+// Q3
+// Todo list banao aur item delete karo.
+
+// let input = document.querySelector("input");
+// let btn = document.querySelector("button");
+// let ul = document.querySelector("ul");
+
+// function add() {
+//   if (input.value) {
+//     let li = document.createElement("li");
+//     let deleteBtn = document.createElement("button");
+//     deleteBtn.textContent = "delete items";
+//     li.textContent = input.value;
+//     ul.append(li, deleteBtn);
+//     deleteBtn.addEventListener("click",()=>{
+//         li.remove();
+//         deleteBtn.remove();
+//     })
+//   }
+// }
+// btn.addEventListener("click", add);
