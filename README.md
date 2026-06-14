@@ -50,6 +50,6 @@ This repository serves as a personal learning journal and practice space for imp
 
 ## 👨‍💻 Author
 
-Sam
+MD RAQUIB HUSSAIN
 
 Frontend Developer | JavaScript Learner
