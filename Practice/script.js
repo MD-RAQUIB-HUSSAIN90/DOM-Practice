@@ -806,3 +806,84 @@
 //     e.target.remove();
 //   }
 // });
+
+//  Timer and intervals.........................
+
+// let hello = setTimeout(() => {
+//   console.log("this is Timeout");
+// }, 2000);
+// let hello1 = setInterval(() => {
+//   console.log("this is Interval");
+// }, 2000);
+
+// clearTimeout(hello);
+// clearInterval(hello1);
+
+// let count = 10;
+// let counter = setInterval(() => {
+//   if (count >= 0) {
+//     console.log(count);
+//     count--;
+//   } else {
+//     clearInterval(counter);
+//   }
+// }, 1000);
+
+// Create Download progress bar..................
+
+// let progress = document.querySelector("#progressBar");
+// let percentage = document.querySelector(".percent");
+// let seconds = 10;
+
+// let count = 0;
+// let setIntval=setInterval(
+//   () => {
+//     if (count <= 99) {
+//       progressBar.style.width = `${count}%`;
+//       count++;
+//       percentage.textContent = count;
+//     } else {
+//       document.querySelector("#Dwnld").textContent = "Downloaded";
+//       clearInterval(setIntval)
+//        document.querySelector(".display").style.display = "none";
+//     }
+//   },
+//   (seconds * 1000) / 100,
+// );
+
+// Auto hide alert banner after 3s.................
+
+// let alrt = setTimeout(() => {
+//   document.querySelector(".display").style.display = "none";
+// }, 3000);
+
+// Form validation....................
+
+let form = document.querySelector("form");
+let userName = document.querySelector("#username");
+let contact = document.querySelector("#contact");
+let password = document.querySelector("#password");
+let reEnterPassword = document.querySelector("#reEnterPassword");
+let btn = document.querySelector("#btn");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let pass1 = password.value;
+  let pass2 = reEnterPassword.value;
+  const numRegex = /^\d{10}$/;
+  const userRegex = /^[A-Z][a-zA-Z]*$/;
+  // if (
+  //   userName.value.trim() === "" ||
+  //   contact.value.trim() === "" ||
+  //   password.value.trim() === "" ||
+  //   reEnterPassword.value === ""
+  // ) {
+  //   // alert("All Fields are mendatory!!");
+  // }
+
+  if (!userRegex.test(userName.value)) {
+    console.log("name ka pehla letter capital karo");
+  } else if (!numRegex.test(contact.value)) {
+    console.log("number sahi dalo");
+  }
+});
